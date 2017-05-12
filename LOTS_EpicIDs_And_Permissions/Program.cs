@@ -17,7 +17,7 @@ namespace LOTS_EpicIDs_And_Permissions
             var sb = new StringBuilder();
             var app = new Application();
             var interopWb = app.Workbooks.Open(Path.Combine(Environment.CurrentDirectory, "Epics.xls"));
-            interopWb.SaveAs(Filename: Path.Combine(Environment.CurrentDirectory, "Epics.xlsx"), FileFormat: XlFileFormat.xlOpenXMLWorkbook);
+            interopWb.SaveAs(Path.Combine(Environment.CurrentDirectory, "Epics.xlsx"), XlFileFormat.xlOpenXMLWorkbook);
             interopWb.Close();
             app.Quit();
 
